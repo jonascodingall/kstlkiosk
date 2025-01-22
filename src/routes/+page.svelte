@@ -1,2 +1,48 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import * as Avatar from '$lib/components/ui/avatar/index.js';
+	import Button from '$lib/components/ui/button/button.svelte';
+	import Skeleton from '$lib/components/ui/skeleton/skeleton.svelte';
+
+	import * as Card from '$lib/components/ui/card/index.js';
+	import * as Carousel from '$lib/components/ui/carousel/index.js';
+</script>
+
+<div class="mx-10 my-10 flex justify-between">
+	<Avatar.Root>
+		<Avatar.Image src="" alt="@shadcn" />
+		<Avatar.Fallback>CN</Avatar.Fallback>
+	</Avatar.Root>
+
+	<div>
+		<Button variant="ghost">Home</Button>
+		<Button variant="ghost">Bestellen</Button>
+		<Button variant="ghost">Produkte</Button>
+		<Button variant="ghost">Anmelden</Button>
+	</div>
+</div>
+
+<div class="flex h-80 justify-evenly">
+	<div>
+		<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+			WILLKOMMEN BEI<br />OFFICE SNACKS<br />
+		</h1>
+		<h2 class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+			GUTEN HUNGER
+		</h2>
+	</div>
+	<Skeleton class="mr-10 w-[500px]" />
+</div>
+
+<div class="mx-20 h-20">
+	<Carousel.Root class="w-full max-w-sm">
+		<Carousel.Content>
+			{#each Array(5) as _, i (i)}
+				<Carousel.Item class="basis-1/4">
+					<div class="">Test</div>
+				</Carousel.Item>
+			{/each}
+		</Carousel.Content>
+		<Carousel.Previous />
+		<Carousel.Next />
+	</Carousel.Root>
+</div>
