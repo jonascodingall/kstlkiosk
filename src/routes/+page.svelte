@@ -1,18 +1,24 @@
 <script lang="ts">
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
 	import Button from '$lib/components/ui/button/button.svelte';
-	import Skeleton from '$lib/components/ui/skeleton/skeleton.svelte';
 
 	import * as Card from '$lib/components/ui/card/index.js';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
+	import { Sun, Moon } from 'radix-icons-svelte';
+	import { toggleMode } from 'mode-watcher';
 </script>
 
 <div class="mx-10 my-10 flex justify-between">
-	<Avatar.Root>
-		<Avatar.Image src="" alt="@shadcn" />
-		<Avatar.Fallback>OS</Avatar.Fallback>
-	</Avatar.Root>
-
+	<div class="flex space-x-2">
+		<Avatar.Root>
+			<Avatar.Image src="" alt="@shadcn" />
+			<Avatar.Fallback>OS</Avatar.Fallback>
+		</Avatar.Root>
+		<Button variant="ghost" size="icon" onclick={toggleMode} class="rounded-full">
+			<Sun class="absolute scale-100 dark:scale-0 " />
+			<Moon class="scale-0 dark:scale-100" />
+		</Button>
+	</div>
 	<div>
 		<Button variant="ghost">Home</Button>
 		<Button variant="ghost">Bestellen</Button>
