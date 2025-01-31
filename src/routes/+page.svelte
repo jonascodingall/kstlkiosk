@@ -10,7 +10,7 @@
 <div class="mx-10 my-10 flex justify-between">
 	<Avatar.Root>
 		<Avatar.Image src="" alt="@shadcn" />
-		<Avatar.Fallback>CN</Avatar.Fallback>
+		<Avatar.Fallback>OS</Avatar.Fallback>
 	</Avatar.Root>
 
 	<div>
@@ -30,15 +30,19 @@
 			GUTEN HUNGER
 		</h2>
 	</div>
-	<Skeleton class="mr-10 w-[500px]" />
+	<img src="/food-placeholder.png" alt="food-placeholder" class="mr-10 w-[500px]" />
 </div>
 
-<div class="mx-20 h-20">
-	<Carousel.Root class="w-full max-w-sm">
-		<Carousel.Content>
+<div class="mx-20 mt-20">
+	<Carousel.Root opts={{ align: 'start' }} class=" w-full">
+		<Carousel.Content class="p-6">
 			{#each Array(5) as _, i (i)}
 				<Carousel.Item class="basis-1/4">
-					<div class="">Test</div>
+					<Card.Root>
+						<Card.Content>
+							<img src="/food-placeholder.png" alt="food-img" class="" />
+						</Card.Content>
+					</Card.Root>
 				</Carousel.Item>
 			{/each}
 		</Carousel.Content>
