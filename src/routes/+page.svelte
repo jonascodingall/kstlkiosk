@@ -30,7 +30,7 @@
 <div class="flex h-80 justify-evenly">
 	<div>
 		<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-			WILLKOMMEN BEI<br />OFFICE SNACKS<br />
+			WILLKOMMEN BEI<br />OFFICE SNAX<br />
 		</h1>
 		<h2 class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
 			GUTEN HUNGER
